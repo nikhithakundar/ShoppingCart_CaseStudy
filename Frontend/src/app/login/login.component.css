@@ -1,0 +1,46 @@
+h2{
+    text-align: center;
+  }
+  form{
+    background-color:#3bb83b; 
+    padding: 20px;
+    margin : 50px auto ;
+    margin-top: 90px;
+    border-radius: 30px;
+    width: 400px;
+  }
+  .textboxs{
+    border-color: #AED6F1;
+    margin-top: 5px;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 20px;
+    display: block;
+    width: 90%;
+    height: 5px;
+  }
+  
+  input.ng-invalid.ng-touched{
+    border: 2px solid red;
+  }
+  small{
+    color: red;
+  }
+  #btn1{
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+  }
+  
+  body{
+    margin: auto;
+  }
+  .alert{
+    margin-top: 50px;
+    margin-left: 350px;
+    width: 500px;
+    height: 70px;
+    text-align: center;
+  }
+  

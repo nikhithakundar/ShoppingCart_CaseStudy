@@ -1,0 +1,67 @@
+  
+  <body>
+    <div>
+      <form  
+      *ngIf="!isLoggedIn"
+      name="form"
+      (ngSubmit)="f.form.valid && onLogin()"
+      #f="ngForm"
+      novalidate
+      >
+        <h2><i class="fa fa-user icon">&nbsp;</i> Login Form</h2>
+        <div class="input-icons">
+          <i class="fa fa-user icon">&nbsp;</i>
+        <label for="username">UserName <small>*</small></label>
+        <input type="text" 
+        name="username" 
+        class="textboxs "
+        id="username" 
+        placeholder="Enter your name"
+        [(ngModel)]="userlogin.username"
+        required
+        pattern="[a-zA-Z][a-zA-Z ]+"
+        #username="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && username.errors }">
+  
+        <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
+        <!-- <div class="alert alert-danger"
+        role="alert"> -->
+       <!-- <div *ngIf="username.errors && f.submitted" class="invalid-feedback">* Username is required</div>  -->
+       <div *ngIf="username.errors['required']">* User Name is required</div>
+       <div *ngIf="username.errors['pattern']">* User Name must be in Alphabets</div>
+      </div>
+      <!-- </div> -->
+      </div><br>
+  
+      <div class="input-icons">
+        <i class="fa fa-lock icon">&nbsp;</i>
+        <label for="password">Password <small>*</small></label>
+        <input type="password"
+        class="textboxs"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        [(ngModel)]="userlogin.password"
+        required
+        minlength="6"
+        #password="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && password.errors }">
+
+          <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
+            <div *ngIf="password.errors['required']">* Password is required</div>
+            <div *ngIf="password.errors['minlength']">* Password must be at least 6 characters</div>
+          </div>
+  
+      </div><br>
+      <br>
+      <div>
+        <button  class="btn btn-success" id="btn1" type="submit">Login</button>
+      </div>  
+
+      </form>
+    </div>
+    <div class="alert alert-success" *ngIf="isLoggedIn" >
+        Logged in Successful !  
+    </div>        
+      
+  </body>

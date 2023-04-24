@@ -1,0 +1,59 @@
+
+  .card-table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-top: 40px;
+    
+}
+  
+  img{
+    width: 100px;
+    height: 100px;
+}
+  
+  
+  
+
+
+
+
+
+
+
+
+
+/* ======================================================= */
+
+
+/* table,td,th{
+    border:2px solid black;
+    background-color: antiquewhite;
+    margin-left: 1px;
+    border-collapse: collapse;
+}
+table{
+    margin-left: 30px;
+    margin-right: 50px;
+    width: 1000px;
+}
+.text-size{
+    font-size: 13px;
+    text-align: center; 
+}
+th{
+    background-color: rgb(185, 185, 247);
+}
+img{
+    width: 100px;
+    height: 100px;
+} */
+
+
+
+/* ======================================================= */

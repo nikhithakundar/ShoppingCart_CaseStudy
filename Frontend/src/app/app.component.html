@@ -1,0 +1,66 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-primary">
+    <img src="https://cdn-icons-png.flaticon.com/128/1062/1062974.png" width="90" height="75" alt="">
+    <a href="#" class="navbar-brand a1"><b><i>E Shopping Zone</i></b></a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">Home </a>
+      </li>
+
+    
+      <li class="nav-item"  >
+        <input type="text"  class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)"
+          placeholder="serach products">
+      </li>
+      <span class="fas fa-search search-icon"></span>
+
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="product-list">Admin Board</a>
+      </li>
+
+      <!-- <li class="nav-item user">
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn && !showAdminBoard" routerLink="user">User</a>
+      </li> -->
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">Profile</a>
+        <!-- {{ username }} -->
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <button routerLink="cart" style="margin-left: 12px;margin-top: 25px;" class="btn btn-primary"
+          *ngIf="isLoggedIn && !showAdminBoard">
+          <i style="font-size:30px; " class="fas fa-cart-plus"></i>
+          <div style="font-size:10px; " class="badge bg-danger">{{totalItem}}</div>
+        </button>
+      </li>
+    </ul>
+
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<footer>
+  <div class="text-center p-3  bg-primary" style=" color:black;"> ©2023 Copyright: &nbsp;
+    <a href="/term" style="color: white;" routerLink="term">Terms&Conditions</a> |
+    <a href="/about" style="color: white;" class="nav-link" routerLink="about">About</a>
+  </div>
+</footer>

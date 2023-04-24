@@ -1,0 +1,47 @@
+li{
+    float: left;
+    display:block;
+    text-align: left;
+    padding: 10px 10px;
+    /* text-decoration:underline; */
+    overflow: hidden;
+    /* background-color: rgb(14, 14, 243); */
+    height: auto;
+}
+li:hover
+{
+    
+     /* background-color:rgb(44, 44, 162); */
+    color: rgb(6, 139, 216);
+    text-align: center;
+    padding: 15px;
+    height: auto;
+} 
+
+
+nav{
+    height: 100px;
+}
+.a1{
+    margin-left: 20px;
+}
+img{
+    margin-left: 5px;
+}
+
+.form-control{
+    border-radius: 3px;
+    width: 500px;
+    margin-left: 20px;
+}
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    right: 49%;
+    left: 68%;
+    top: 40px;
+    color: blue;
+}
+
+
+

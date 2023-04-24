@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #222d45;
+    
+}
+
+
+.title {
+    font-family: cursive;
+}
+
+.fade-scroll {
+    background-color: #845334;
+    color: aliceblue;
+}
+
+.image-grid {
+   background-color: #3e8476;
+   color: aliceblue;
+   height: 50px;
+}
+
+.button-css-contact {
+    background-color: #c9d47d;
+}
+
+.button-css-contact-form {
+   background-color: #00CED1;
+   background: linear-gradient(110.9deg, rgb(159, 131, 216) 2.6%, rgb(27, 245, 241) 100.2%);
+    caret-color: white;
+}
+.col-md-12 {
+   background-color: #8fd779;
+   color: aliceblue;
+   height: 50px;
+}
+
